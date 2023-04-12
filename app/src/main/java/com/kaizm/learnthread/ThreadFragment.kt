@@ -9,18 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kaizm.learnthread.databinding.FragmentThreadBinding
 
-class MyThread : Runnable {
-    override fun run() {
-        try {
-            Thread.sleep(3000)
-            Log.e(TAG, "Run on ${Thread.currentThread().name} Done")
-        } catch (e: InterruptedException) {
-            Log.e(TAG, "Fail ${e.localizedMessage}")
-        }
-
-    }
-}
-
 class ThreadFragment : Fragment() {
     private lateinit var binding: FragmentThreadBinding
     private lateinit var runnable: Runnable
